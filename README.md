@@ -7,6 +7,11 @@ Adds a preview for Office documents (`.docx`, `.pptx`, `.xlsx`) attached to Matt
 
 Rendering happens entirely in the browser (no server-side conversion), using [`@silurus/ooxml`](https://github.com/yukiyokotani/office-open-xml-viewer).
 
+<p align="center">
+  <img src="docs/screenshots/docx-preview.png" width="49%" alt="Inline preview of a .docx file in Mattermost" />
+  <img src="docs/screenshots/pptx-preview.png" width="49%" alt="Inline preview of a .pptx file in Mattermost" />
+</p>
+
 To learn more about Mattermost plugins, see [the plugin documentation](https://developers.mattermost.com/extend/plugins/).
 
 This project requires node v16 and npm v8. You can download and install nvm to manage your node versions by following the instructions [here](https://github.com/nvm-sh/nvm). Once you've setup the project simply run `nvm i` within the root folder to use the suggested version of node.
