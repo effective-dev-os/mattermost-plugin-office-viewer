@@ -3,7 +3,9 @@
 [![Build Status](https://github.com/effective-dev-os/mattermost-plugin-office-viewer/actions/workflows/ci.yml/badge.svg)](https://github.com/effective-dev-os/mattermost-plugin-office-viewer/actions/workflows/ci.yml)
 [![E2E Status](https://github.com/effective-dev-os/mattermost-plugin-office-viewer/actions/workflows/e2e.yml/badge.svg)](https://github.com/effective-dev-os/mattermost-plugin-office-viewer/actions/workflows/e2e.yml)
 
-Renders inline previews of office documents (`.docx`, `.pptx`, `.xlsx`, and similar) attached to messages, in both Mattermost Web and Desktop — the same way `mattermost-plugin-heic-viewer` renders HEIC images inline instead of leaving them as a bare download link. See [`.memory-bank/product-overview/vision.md`](.memory-bank/product-overview/vision.md) for the full vision, target audience, and definition of done.
+Adds a preview for Office documents (`.docx`, `.pptx`, `.xlsx`) attached to Mattermost messages. Click an attached document and it opens in the file-preview modal, rendered right there — no more downloading a file just to see what's in it. Works in Mattermost Web and Desktop. Unsupported files, or ones that fail to render, fall back to the normal download view.
+
+Rendering happens entirely in the browser (no server-side conversion), using [`@silurus/ooxml`](https://github.com/yukiyokotani/office-open-xml-viewer).
 
 To learn more about Mattermost plugins, see [the plugin documentation](https://developers.mattermost.com/extend/plugins/).
 
