@@ -1,53 +1,17 @@
-# Plugin Starter Template
+# Office Viewer for Mattermost
 
-[![Build Status](https://github.com/mattermost/mattermost-plugin-starter-template/actions/workflows/ci.yml/badge.svg)](https://github.com/mattermost/mattermost-plugin-starter-template/actions/workflows/ci.yml)
-[![E2E Status](https://github.com/mattermost/mattermost-plugin-starter-template/actions/workflows/e2e.yml/badge.svg)](https://github.com/mattermost/mattermost-plugin-starter-template/actions/workflows/e2e.yml)
+[![Build Status](https://github.com/effective-dev-os/mattermost-plugin-office-viewer/actions/workflows/ci.yml/badge.svg)](https://github.com/effective-dev-os/mattermost-plugin-office-viewer/actions/workflows/ci.yml)
+[![E2E Status](https://github.com/effective-dev-os/mattermost-plugin-office-viewer/actions/workflows/e2e.yml/badge.svg)](https://github.com/effective-dev-os/mattermost-plugin-office-viewer/actions/workflows/e2e.yml)
 
-This plugin serves as a starting point for writing a Mattermost plugin. Feel free to base your own plugin off this repository.
+Renders inline previews of office documents (`.docx`, `.pptx`, `.xlsx`, and similar) attached to messages, in both Mattermost Web and Desktop — the same way `mattermost-plugin-heic-viewer` renders HEIC images inline instead of leaving them as a bare download link. See [`.memory-bank/product-overview/vision.md`](.memory-bank/product-overview/vision.md) for the full vision, target audience, and definition of done.
 
-To learn more about plugins, see [our plugin documentation](https://developers.mattermost.com/extend/plugins/).
+To learn more about Mattermost plugins, see [the plugin documentation](https://developers.mattermost.com/extend/plugins/).
 
-This template requires node v16 and npm v8. You can download and install nvm to manage your node versions by following the instructions [here](https://github.com/nvm-sh/nvm). Once you've setup the project simply run `nvm i` within the root folder to use the suggested version of node.
-
-## Getting Started
-Use GitHub's template feature to make a copy of this repository by clicking the "Use this template" button.
-
-Alternatively shallow clone the repository matching your plugin name:
-```
-git clone --depth 1 https://github.com/mattermost/mattermost-plugin-starter-template com.example.my-plugin
-```
+This project requires node v16 and npm v8. You can download and install nvm to manage your node versions by following the instructions [here](https://github.com/nvm-sh/nvm). Once you've setup the project simply run `nvm i` within the root folder to use the suggested version of node.
 
 Note that this project uses [Go modules](https://github.com/golang/go/wiki/Modules). Be sure to locate the project outside of `$GOPATH`.
 
-Edit the following files:
-1. `plugin.json` with your `id`, `name`, and `description`:
-```json
-{
-    "id": "com.example.my-plugin",
-    "name": "My Plugin",
-    "description": "A plugin to enhance Mattermost."
-}
-```
-
-2. `go.mod` with your Go module path, following the `<hosting-site>/<repository>/<module>` convention:
-```
-module github.com/example/my-plugin
-```
-
-3. Replace all occurrences of `github.com/mattermost/mattermost-plugin-starter-template` in the codebase with your Go module path:
-```bash
-sed -i '' 's|github.com/mattermost/mattermost-plugin-starter-template|github.com/example/my-plugin|g' server/*.go
-```
-
-4. Replace `.golangci.yml` `local-prefixes` attribute with your Go module path:
-```yml
-linters-settings:
-  # [...]
-  goimports:
-    local-prefixes: github.com/example/my-plugin
-```
-
-5. Build your plugin:
+Build the plugin:
 ```
 make
 ```
@@ -55,7 +19,7 @@ make
 This will produce a single plugin file (with support for multiple architectures) for upload to your Mattermost server:
 
 ```
-dist/com.example.my-plugin.tar.gz
+dist/com.effective-dev-os.office-viewer.tar.gz
 ```
 
 ## Development
