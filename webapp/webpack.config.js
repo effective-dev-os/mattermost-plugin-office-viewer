@@ -85,8 +85,9 @@ const config = {
     output: {
         devtoolNamespace: PLUGIN_ID,
         path: path.join(__dirname, '/dist'),
-        publicPath: '/',
+        publicPath: 'auto',
         filename: 'main.js',
+        chunkFilename: '[name].[contenthash].js',
     },
     mode: (isDev) ? 'eval-source-map' : 'production',
     plugins,

@@ -796,10 +796,10 @@ export interface PluginRegistry {
     */
     registerFilePreviewComponent(
         ...args: [
-            override: (fileInfos: FileInfo[], post: Post) => boolean,
+            override: (fileInfo: FileInfo, post?: Post) => boolean,
                     component: ReactResolvable
         ] | [{
-            override: (fileInfos: FileInfo[], post: Post) => boolean;
+            override: (fileInfo: FileInfo, post?: Post) => boolean;
             component: ReactResolvable;
         }]
     ): UniqueIdentifier;
